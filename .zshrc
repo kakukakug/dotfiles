@@ -1,5 +1,3 @@
-autoload -U compinit
-compinit
 export LANG=ja_JP.UTF-8
 
 HISTSIZE=1000
@@ -11,9 +9,12 @@ setopt auto_cd
 
 # Git
 fpath=(~/.zsh $fpath)
-if [ -f ${HOME}/.zsh/git-completion.zsh ]; then
-  zstyle ':completion:*:*:git:*' script ~/.zsh/git-completion.zsh
-fi
+# if [ -f ${HOME}/.zsh/git-completion.zsh ]; then
+#  zstyle ':completion:*:*:git:*' script ~/.zsh/git-completion.zsh
+# fi
+autoload -U compinit
+compinit -u 
+
 if [ -f ${HOME}/.zsh/git-prompt.sh ]; then
   source ${HOME}/.zsh/git-prompt.sh
 fi
