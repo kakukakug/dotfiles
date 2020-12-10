@@ -3,7 +3,7 @@ repo = 'Shougo/dein.vim'
 
 [[plugins]]
 repo = 'vim-airline/vim-airline'
-depends = ['/vim-airline-themes']
+
 
 [[plugins]]
 repo = 'morhetz/gruvbox'
@@ -24,66 +24,122 @@ hook_add = '''
 [[plugins]]
 repo = 'scrooloose/nerdtree'
 hook_add = '''
-  map <C-n> :NERDTreeToggle<CR>
+  nmap <Leader>n :NERDTreeToggle<CR>
 '''
 
 [[plugins]]
 repo = 'airblade/vim-gitgutter'
+hook_add = '''
+  let g:gitgutter_enabled = 0
+  let g:gitgutter_map_keys = 0
+  nmap <Leader>gg :GitGutterToggle<CR>
+  nmap <Leader>gn <Plug>(GitGutterNextHunk)
+  nmap <Leader>gp <Plug>(GitGutterPrevHunk)
+'''
 
 [[plugins]]
 repo = 'tpope/vim-fugitive'
 
 [[plugins]]
 repo = 'scrooloose/nerdcommenter'
+hook_add = '''
+  let g:NERDCreateDefaultMappings = 0
+  let g:NERDSpaceDelims = 1
+  nmap <Leader>/ <Plug>NERDCommenterToggle
+'''
+
 
 [[plugins]]
 repo = 'Xuyuanp/nerdtree-git-plugin'
 
 [[plugins]]
 repo = 'nathanaelkane/vim-indent-guides'
+hook_add = '''
+  nmap <Leader>ig :IndentGuidesToggle<CR>
+'''
 
 [[plugins]]
 repo = 'mattn/webapi-vim'
 
 [[plugins]]
-repo = 'tpope/vim-surround'
-
-[[plugins]]
 repo = 'easymotion/vim-easymotion'
 hook_add = '''
-  nmap <Leader>s <Plug>(easymotion-s2)
-  xmap <Leader>s <Plug>(easymotion-s2)
+  map <Leader>e <Plug>(easymotion-prefix)
   let g:EasyMotion_smartcase = 1
   let g:EasyMotion_keys = 'ASDFGHJKL;'
   let g:EasyMotion_use_upper = 1
   let g:EasyMotion_enter_jump_first = 1
   let g:EasyMotion_space_jump_first = 1
-  map <Leader>j <Plug>(easymotion-j)
-  map <Leader>k <Plug>(easymotion-k)
-  nmap g/ <Plug>(easymotion-sn)
-  xmap g/ <Plug>(easymotion-sn)
-  omap g/ <Plug>(easymotion-tn)
+  nmap <Leader>ee <Plug>(easymotion-s2)
+  xmap <Leader>ee <Plug>(easymotion-s2)
+  nmap <Leader>ej <Plug>(easymotion-j)
+  nmap <Leader>ek <Plug>(easymotion-k)
+  nmap <Leader>e/ <Plug>(easymotion-sn)
+  xmap <Leader>e/ <Plug>(easymotion-sn)
+  omap <Leader>e/ <Plug>(easymotion-tn)
+  nmap <Leader>eL <Plug>(easymotion-overwin-line)
   hi EasyMotionTarget guifg=#80a0ff ctermfg=81
 '''
 
 [[plugins]]
 repo = 'justinmk/vim-sneak'
+hook_add = '''
+  nmap <Leader>s <Plug>Sneak_s
+  nmap <Leader>S <Plug>Sneak_S
+'''
 
 [[plugins]]
 repo = 'vim-scripts/ReplaceWithRegister'
+hook_add = '''
+  nmap <Leader>r  <Plug>ReplaceWithRegisterOperator
+  nmap <Leader>rr <Plug>ReplaceWithRegisterLine
+  xmap <Leader>r  <Plug>ReplaceWithRegisterVisual
+'''
 
 [[plugins]]
 repo = 'bkad/CamelCaseMotion'
 hook_add = '''
-  let g:camelcasemotion_key = '<leader>'
+  let g:camelcasemotion_key = '<Leader>c'
 '''
 
 [[plugins]]
-repo = 'AndrewRadev/splitjoin.vim'
-
-[[plugins]]
 repo = 'majutsushi/tagbar'
+hook_add = '''
+  nnoremap <Leader>t :<C-u>TagbarToggle<CR>
+'''
 
 [[plugins]]
 repo = 'ctrlpvim/ctrlp.vim'
+hook_add = '''
+  let g:ctrlp_map = '<Leader><C-p>'
+'''
+
+[[plugins]]
+repo = 'terryma/vim-expand-region'
+hook_add = '''
+  vmap v <Plug>(expand_region_expand)
+  vmap <C-v> <Plug>(expand_region_shrink)
+'''
+
+[[plugins]]
+repo = 'jacquesbh/vim-showmarks'
+hook_add = '''
+  nmap <Leader>ms :1ShowMarksOnce<CR>
+  nmap <Leader>mp :1PreviewMarks<CR>
+'''
+
+[[plugins]]
+repo = 'prabirshrestha/vim-lsp'
+hook_add = '''
+  let g:lsp_diagnostics_float_cursor = 1
+  let g:lsp_virtual_text_enabled = 0
+'''
+
+[[plugins]]
+repo = 'mattn/vim-lsp-settings'
+
+# [[plugins]]
+# repo = 'AndrewRadev/splitjoin.vim'
+# [[plugins]]
+# repo = 'tpope/vim-surround'
 

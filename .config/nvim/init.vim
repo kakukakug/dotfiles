@@ -24,6 +24,7 @@ set sidescrolloff=10
 
 set confirm
 set autoread
+set notimeout 
 
 set hlsearch
 set incsearch
@@ -45,6 +46,21 @@ let &grepprg="grep -rnIH --exclude=.git --exclude-dir=.hg --exclude-dir=.svn --e
 " <leader>デフォルトはバックスラッシュ
 " 変更が必要なら以下で上書きする space
 let mapleader = "\<Space>"
+
+" Python
+let g:python_host_prog = $PYENV_ROOT.'/versions/neovim2/bin/python'
+let g:python3_host_prog = $PYENV_ROOT.'/versions/neovim3/bin/python'
+
+" Ruby
+let g:ruby_host_prog = '/Users/kazuya/.rbenv/versions/2.5.8/bin/neovim-ruby-host'
+
+" Node
+let g:node_host_prog = '/Users/kazuya/.nvm/versions/node/v12.18.3/bin/neovim-node-host'
+
+" true color
+set termguicolors
+let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum" " 文字色
+let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum" " 背景色
 
 " 拡張子のインデント・タブの設定
 augroup fileTypeIndent
@@ -158,14 +174,15 @@ nnoremap っy yy
 
 "自作のコマンド郡
 :let $TODAY = strftime('%Y%m%d')
-imap <silent> <C-L><C-D> <C-R>=strftime("%Y-%m-%d")<CR>
-nmap <silent> <C-L><C-D> <ESC>i<C-R>=strftime("%Y-%m-%d")<CR><CR><ESC>
+imap <silent> <C-L>d <C-R>=strftime("%Y-%m-%d")<CR>
+nmap <silent> <Leader><Leader>d <ESC>i<C-R>=strftime("%Y-%m-%d")<CR><CR><ESC>
+"imap <silent> <C-L><C-D> <C-R>=strftime("%Y-%m-%d")<CR>
+"nmap <silent> <C-L><C-D> <ESC>i<C-R>=strftime("%Y-%m-%d")<CR><CR><ESC>
 :command! CountChar :%s/.//gn
 "自作テンプレートを読み込む
 augroup templateload
     autocmd!
     autocmd BufNewFile *.md 0r ~/.vim/template/template.md
 augroup END
-
-
+ 
 
