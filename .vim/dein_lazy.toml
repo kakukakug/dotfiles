@@ -7,6 +7,10 @@ hook_add = '''
 on_ft = ['html','css','javascript','typescript']
 
 [[plugins]]
+repo = 'HerringtonDarkholme/yats.vim'
+on_ft = ['typescriptreact','typescript']
+
+[[plugins]]
 repo = 'Shougo/neosnippet.vim'
 
 [[plugins]]
@@ -48,4 +52,3 @@ repo = 'prabirshrestha/asyncomplete.vim'
 
 [[plugins]]
 repo = 'prabirshrestha/asyncomplete-lsp.vim'
-

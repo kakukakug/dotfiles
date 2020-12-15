@@ -142,4 +142,3 @@ repo = 'mattn/vim-lsp-settings'
 # repo = 'AndrewRadev/splitjoin.vim'
 # [[plugins]]
 # repo = 'tpope/vim-surround'
-

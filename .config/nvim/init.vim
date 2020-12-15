@@ -71,7 +71,7 @@ augroup fileTypeIndent
     autocmd BufNewFile,BufRead *.txt setlocal expandtab tabstop=4 softtabstop=4 shiftwidth=4
     autocmd BufNewFile,BufRead *.js setlocal expandtab tabstop=2 softtabstop=2 shiftwidth=2 
     autocmd BufNewFile,BufRead *.ts setlocal expandtab tabstop=2 softtabstop=2 shiftwidth=2 filetype=typescript
-    autocmd BufNewFile,BufRead *.tsx setlocal expandtab tabstop=2 softtabstop=2 shiftwidth=2 filetype=typescript
+    autocmd BufNewFile,BufRead *.tsx setlocal expandtab tabstop=2 softtabstop=2 shiftwidth=2
     autocmd BufNewFile,BufRead *.html setlocal expandtab tabstop=2 softtabstop=2 shiftwidth=2
     autocmd BufNewFile,BufRead *.json setlocal expandtab tabstop=2 softtabstop=2 shiftwidth=2 conceallevel=0
 augroup END
@@ -185,4 +185,3 @@ augroup templateload
     autocmd BufNewFile *.md 0r ~/.vim/template/template.md
 augroup END
  
-
