@@ -99,7 +99,7 @@ hook_add = '''
 [[plugins]]
 repo = 'bkad/CamelCaseMotion'
 hook_add = '''
-  let g:camelcasemotion_key = '<Leader>c'
+  let g:camelcasemotion_key = '<Leader>w'
 '''
 
 [[plugins]]
@@ -133,6 +133,31 @@ repo = 'prabirshrestha/vim-lsp'
 hook_add = '''
   let g:lsp_diagnostics_float_cursor = 1
   let g:lsp_virtual_text_enabled = 0
+  nmap <Leader>ld :LspDefinition<CR>
+  nmap <Leader>lD :LspPeekDefinition<CR>
+  nmap <Leader>li :LspImplementation<CR>
+  nmap <Leader>lI :LspPeekImplementation<CR>
+  nmap <Leader>lc :LspDeclaration<CR>
+  nmap <Leader>lC :LspPeekDeclaration<CR>
+
+  nmap <Leader>lt :LspTypeDefinition<CR>
+  nmap <Leader>lT :LspPeekTypeDefinition<CR>
+
+  nmap <Leader>ll :LspDocumentDiagnostics<CR>
+  nmap <Leader>lf :LspDocumentFormat<CR>
+  nmap <Leader>ls :LspWorkspaceSymbol<CR>
+  nmap <Leader>lS :LspDocumentSymbol<CR>
+  nmap <Leader>lh :LspHover<CR>
+  nmap <Leader>lH :LspReferences<CR>
+
+  nmap <Leader>ln :LspNextDiagnostic<CR>
+  nmap <Leader>lN :LspPreviousDiagnostic<CR>
+  nmap <Leader>le :LspNextError<CR>
+  nmap <Leader>lE :LspPreviousError<CR>
+  nmap <Leader>lr :LspNextReference<CR>
+  nmap <Leader>lR :LspPreviousRefarence<CR>
+  nmap <Leader>lw :LspNextWarning<CR>
+  nmap <Leader>lW :LspPreviousWarning<CR>
 '''
 
 [[plugins]]
@@ -142,3 +167,4 @@ repo = 'mattn/vim-lsp-settings'
 # repo = 'AndrewRadev/splitjoin.vim'
 # [[plugins]]
 # repo = 'tpope/vim-surround'
+

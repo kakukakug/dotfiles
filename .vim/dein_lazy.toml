@@ -4,11 +4,11 @@ hook_add = '''
   let g:user_emmet_leader_key='<C-l>e'
   let g:user_emmet_settings = webapi#json#decode(join(readfile(expand('~/.vim/snippet/snippets_reactnative.json')), "\n"))
 '''
-on_ft = ['html','css','javascript','typescript']
+on_ft = ['html','css','javascript','typescript','typescriptreact']
 
 [[plugins]]
 repo = 'HerringtonDarkholme/yats.vim'
-on_ft = ['typescriptreact','typescript']
+on_ft = ['typescript','typescriptreact']
 
 [[plugins]]
 repo = 'Shougo/neosnippet.vim'
@@ -27,14 +27,16 @@ hook_add = '''
 [[plugins]]
 repo = 'prettier/vim-prettier'
 hook_add = '''
+  nmap <Leader>pp <Plug>(Prettier)
   let g:prettier#config#tab_width = 2
   let g:prettier#config#jsx_bracket_same_line = 'true'
   let g:prettier#config#bracket_spacing = 'true'
 '''
+on_ft = ['javascript','typescript','typescriptreact']
+
 #let g:prettier#config#print_width = 100
 #let g:prettier#config#single_quote = 'true'
 #let g:prettier#config#trailing_comma = 'es5'
-on_ft = ['javascript','typescript']
 
 # [[plugins]]
 # repo = 'Shougo/neocomplcache'
@@ -52,3 +54,4 @@ repo = 'prabirshrestha/asyncomplete.vim'
 
 [[plugins]]
 repo = 'prabirshrestha/asyncomplete-lsp.vim'
+
