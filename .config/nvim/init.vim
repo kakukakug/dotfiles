@@ -176,6 +176,8 @@ nnoremap っy yy
 :let $TODAY = strftime('%Y%m%d')
 imap <silent> <C-L>d <C-R>=strftime("%Y-%m-%d")<CR>
 nmap <silent> <Leader><Leader>d <ESC>i<C-R>=strftime("%Y-%m-%d")<CR><CR><ESC>
+imap <C-S> <C-[>
+nmap <C-S> :
 "imap <silent> <C-L><C-D> <C-R>=strftime("%Y-%m-%d")<CR>
 "nmap <silent> <C-L><C-D> <ESC>i<C-R>=strftime("%Y-%m-%d")<CR><CR><ESC>
 :command! CountChar :%s/.//gn

@@ -131,7 +131,8 @@ hook_add = '''
 [[plugins]]
 repo = 'prabirshrestha/vim-lsp'
 hook_add = '''
-  let g:lsp_diagnostics_float_cursor = 1
+  let g:lsp_diagnostics_float_cursor = 0
+  let g:lsp_diagnostics_echo_cursor= 1
   let g:lsp_virtual_text_enabled = 0
   nmap <Leader>ld :LspDefinition<CR>
   nmap <Leader>lD :LspPeekDefinition<CR>
