@@ -1,0 +1,13 @@
+[user]
+	email = kakukakug@gmail.com
+	name = kakukakug
+[core]
+	editer = vi
+	editor = vim
+[pull]
+    rebase = false
+[alias]
+    logg = log --oneline --graph
+    poh = push origin HEAD
+    cae = commit --allow-empty -m "wip"
+
