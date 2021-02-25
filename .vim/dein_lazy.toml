@@ -32,7 +32,7 @@ hook_add = '''
   let g:prettier#config#jsx_bracket_same_line = 'true'
   let g:prettier#config#bracket_spacing = 'true'
 '''
-on_ft = ['javascript','typescript','typescriptreact']
+on_ft = ['javascript','typescript','typescriptreact','json']
 
 #let g:prettier#config#print_width = 100
 #let g:prettier#config#single_quote = 'true'
