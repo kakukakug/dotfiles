@@ -52,10 +52,10 @@ let g:python_host_prog = $PYENV_ROOT.'/versions/neovim2/bin/python'
 let g:python3_host_prog = $PYENV_ROOT.'/versions/neovim3/bin/python'
 
 " Ruby
-let g:ruby_host_prog = '/Users/kazuya/.rbenv/versions/2.5.8/bin/neovim-ruby-host'
+let g:ruby_host_prog = '/Users/kos/.rbenv/versions/2.7.1/bin/neovim-ruby-host'
 
 " Node
-let g:node_host_prog = '/Users/kazuya/.nvm/versions/node/v12.18.3/bin/neovim-node-host'
+let g:node_host_prog = '/Users/kos/.nvm/versions/node/v14.16.1/bin/neovim-node-host'
 
 " true color
 set termguicolors
@@ -79,7 +79,7 @@ augroup END
 " 折りたたみ設定
 augroup fileTypeFold
     autocmd!
-    autocmd BufNewFile,BufRead *.tsx setlocal foldmethod=syntax foldlevel=1 
+"    autocmd BufNewFile,BufRead *.tsx setlocal foldmethod=syntax foldlevel=1 
 augroup END
 
 " dein.vim settings {{{
@@ -164,6 +164,9 @@ let g:netrw_sizestyle="H"
 let g:netrw_timefmt="%Y/%m/%d %H:%M:%S"
 let g:netrw_preview=1
 
+" terminal での離脱コマンド
+tnoremap <C-[> <C-\><C-n>
+
 " 日本語入力がオンのままでも使えるコマンド(Enterキーは必要)
 nnoremap あ a
 nnoremap い i
@@ -176,6 +179,8 @@ nnoremap っy yy
 :let $TODAY = strftime('%Y%m%d')
 imap <silent> <C-L>d <C-R>=strftime("%Y-%m-%d")<CR>
 nmap <silent> <Leader><Leader>d <ESC>i<C-R>=strftime("%Y-%m-%d")<CR><ESC>
+nmap <silent> <Leader><Leader>p :let @* = expand("%")<CR>
+imap <C-L>l <C-[>
 imap <C-S> <C-[>
 nmap <C-S> :
 "imap <silent> <C-L><C-D> <C-R>=strftime("%Y-%m-%d")<CR>
@@ -186,4 +191,4 @@ augroup templateload
     autocmd!
     autocmd BufNewFile *.md 0r ~/.vim/template/template.md
 augroup END
- 
+
