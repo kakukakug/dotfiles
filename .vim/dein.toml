@@ -24,7 +24,7 @@ hook_add = '''
 [[plugins]]
 repo = 'scrooloose/nerdtree'
 hook_add = '''
-  nmap <Leader>n :NERDTreeToggle<CR>
+  nmap <Leader>n :NERDTreeFocus<CR>
 '''
 
 [[plugins]]
@@ -46,6 +46,7 @@ hook_add = '''
   let g:NERDCreateDefaultMappings = 0
   let g:NERDSpaceDelims = 1
   nmap <Leader>/ <Plug>NERDCommenterToggle
+  vmap <Leader>/ <Plug>NERDCommenterToggle
 '''
 
 
@@ -140,17 +141,14 @@ hook_add = '''
   nmap <Leader>lI :LspPeekImplementation<CR>
   nmap <Leader>lc :LspDeclaration<CR>
   nmap <Leader>lC :LspPeekDeclaration<CR>
-
   nmap <Leader>lt :LspTypeDefinition<CR>
   nmap <Leader>lT :LspPeekTypeDefinition<CR>
-
   nmap <Leader>ll :LspDocumentDiagnostics<CR>
   nmap <Leader>lf :LspDocumentFormat<CR>
   nmap <Leader>ls :LspWorkspaceSymbol<CR>
   nmap <Leader>lS :LspDocumentSymbol<CR>
   nmap <Leader>lh :LspHover<CR>
   nmap <Leader>lH :LspReferences<CR>
-
   nmap <Leader>ln :LspNextDiagnostic<CR>
   nmap <Leader>lN :LspPreviousDiagnostic<CR>
   nmap <Leader>le :LspNextError<CR>
@@ -168,4 +166,3 @@ repo = 'mattn/vim-lsp-settings'
 # repo = 'AndrewRadev/splitjoin.vim'
 # [[plugins]]
 # repo = 'tpope/vim-surround'
-
