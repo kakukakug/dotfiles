@@ -1,9 +1,9 @@
 [user]
-	email = kakukakug@gmail.com
-	name = kakukakug
+    email = kakukakug@gmail.com
+    name = kakukakug
 [core]
-	editer = vi
-	editor = vim
+    editer = vi
+    editor = vim
 [pull]
     rebase = false
 [alias]
