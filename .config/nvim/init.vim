@@ -4,6 +4,10 @@ set fileencoding=utf-8
 set fileencodings=utf-8,cp932
 set visualbell
 
+set nowritebackup
+set nobackup
+set noswapfile
+
 set number
 
 set expandtab
@@ -12,6 +16,7 @@ set softtabstop=0
 set shiftwidth=4
 
 set autoindent
+set smartindent
 
 set cursorline
 set ruler
@@ -24,7 +29,7 @@ set sidescrolloff=10
 
 set confirm
 set autoread
-set notimeout 
+set notimeout
 
 set hlsearch
 set incsearch
@@ -65,7 +70,8 @@ let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum" " 背景色
 " 拡張子のインデント・タブの設定
 augroup fileTypeIndent
     autocmd!
-    autocmd BufNewFile,BufRead *.py setlocal expandtab tabstop=4 softtabstop=4 shiftwidth=4
+    autocmd BufNewFile,BufRead *.py setlocal expandtab tabstop=4 softtabstop=4 shiftwidth=4 colorcolumn=100 dictionary=~/.vim/dictionary/python3.dict
+
     autocmd BufNewFile,BufRead *.md setlocal expandtab tabstop=4 softtabstop=4 shiftwidth=4
     autocmd BufNewFile,BufRead *.rb setlocal expandtab tabstop=2 softtabstop=2 shiftwidth=2
     autocmd BufNewFile,BufRead *.txt setlocal expandtab tabstop=4 softtabstop=4 shiftwidth=4
@@ -139,7 +145,7 @@ syntax enable
 "colorscheme 
 "colorscheme darcula
 "colorscheme molokai
-"colorscheme iceberg 
+" colorscheme iceberg 
 colorscheme gruvbox
 set background=dark
 syntax on
@@ -191,4 +197,3 @@ augroup templateload
     autocmd!
     autocmd BufNewFile *.md 0r ~/.vim/template/template.md
 augroup END
-
