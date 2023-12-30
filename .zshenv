@@ -11,6 +11,8 @@ export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
+# rbenv
+export PATH=$PATH:$HOME/.rbenv/bin
 
 export PATH=$PATH:/usr/local/bin/git
 
